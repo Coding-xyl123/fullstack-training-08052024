@@ -6,7 +6,7 @@ function f() {
   if (a > 5) {
     a = 7;
   }
-  console.log(a);
+  console.log(a);//a = 7
 }
 
 // 2. When executed, what value will be output?
@@ -14,7 +14,7 @@ function f() {
   if (true) {
     var a = 5;
   }
-  console.log(a);
+  console.log(a);//a = 5
 }
 
 // 3. When executed, what value will be output?
@@ -22,26 +22,26 @@ function f() {
   a = 3;
 }
 f();
-console.log(a);
+console.log(a);  //a = 3
 
 // 4.
 var a = 5;
 function first() {
   a = 6;
-}
+}//a = 6
 
 function second() {
-  console.log(a);
+  console.log(a);//a = 6
 }
-first();
-second();
+first();//a = 6
+second();// a = 6
 
 // 5.
 var a = 5;
 function f() {
   var a = 7;
   console.log(a);
-}
+}//a = 7
 
 // 6.
 var a = 1;
@@ -50,5 +50,5 @@ function b() {
   return;
   function a() {}
 }
-b();
-console.log(a);
+b();//a = 1
+console.log(a);//a = 1
