@@ -5,6 +5,13 @@
 */
 function extend(o, p) {
     // implement your code here
+    for (let prop in p) {
+        if (p.hasOwnProperty(prop)) {
+            o[prop] = p[prop];
+        }
+    }
+    return o;
+    
 }
 
 /*
@@ -13,6 +20,7 @@ function extend(o, p) {
 */
 function union(o, p) {
     // implement your code here
+    return Object.assign({}, o, p);
 }
 
 /*
@@ -21,6 +29,12 @@ function union(o, p) {
 */
 function restrict(o, p) {
     // implement your code here
+    for (let prop in o) {
+        if (!(prop in p)) {
+            delete o[prop];
+        }
+    }
+    return o;
 }
 
 /*
@@ -30,4 +44,11 @@ function restrict(o, p) {
 */
 function intersection(o, p) {
     // implement your code here
+    let result = {};
+    for (let prop in o) {
+        if (prop in p) {
+            result[prop] = o[prop];
+        }
+    }
+    return result;
 }
