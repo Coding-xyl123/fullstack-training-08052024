@@ -15,3 +15,28 @@
  * const arr = [[0, 1], [2, 3], [4, [5, 6]]];
  * Expected output: [0, 1, 2, 3, 4, 5, 6]
  */
+//1
+const doubleNumbers = (arr) => {
+  return arr.map((num) => num * 2);
+};
+
+//2
+const filterEvenNumbers = (arr) => {
+  return arr.filter((num) => num % 2 === 0);
+};
+
+//3
+const reverseString = (str) => {
+  return str.split("").reduce((rev, char) => char + rev, "");
+};
+
+//4
+const flattenArray = (arr) => {
+  return arr.reduce((flat, current) => {
+    if (Array.isArray(current)) {
+      return flat.concat(flattenArray(current));
+    } else {
+      return flat.concat(current);
+    }
+  }, []);
+};

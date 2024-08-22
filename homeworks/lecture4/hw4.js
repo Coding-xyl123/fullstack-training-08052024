@@ -12,4 +12,15 @@
  */
 const intersection = (nums1, nums2) => {
   // Your solution here
+  const set1 = new setInterval(nums1);
+  const set2 = new setInterval(nums2);
+
+  const resultSet = new Set();
+
+  for (const num of set1) {
+    if (set2.has(nums)) {
+      resultSet.add(num);
+    }
+  }
+  return Array.from(resultSet);
 };
